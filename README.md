@@ -13,7 +13,7 @@ A **Terra Sustentável** foi desenvolvido para provar que a inovação tecnológ
 ## ⚙️ Funcionalidades e Destaques Técnicos
 
 ### ♿ Hub de Inclusão Digital (JavaScript Nativo)
-O grande diferencial técnico da aplicação é um painel flutuante de acessibilidade desenvolvido sob medida, que oferece:
+O grande diferencial técnico da aplicação é um painel de acessibilidade desenvolvido sob medida, que oferece:
 * **Tipografia Dinâmica:** Ajuste milimétrico do tamanho das fontes (de 12px a 24px) para leitura confortável.
 * **Modo Escuro (Dark Mode):** Alternância inteligente de variáveis CSS, proporcionando alto contraste para ambientes com pouca luz ou usuários com sensibilidade visual.
 * 
@@ -26,7 +26,7 @@ O grande diferencial técnico da aplicação é um painel flutuante de acessibil
 
 O projeto priorizou a leveza e a performance, utilizando uma arquitetura limpa:
 
-* **Estrutura:** HTML5 estruturado de forma semântica (melhorando o SEO e leitores de tela).
+* **Estrutura:** HTML estruturado de forma semântica (melhorando o SEO e leitores de tela).
 * **Estilização:** Stile CSS (carregado via CDN para agilidade no desenvolvimento).
 * **Tipografia:** Tipografia padrão integrada via Google Fonts.
 * **Lógica e Interatividade:** JavaScript puro, sem dependência de frameworks pesados.
@@ -40,7 +40,7 @@ O projeto segue uma estrutura limpa e modular, separando as responsabilidades de
 
 | Arquivo / Pasta | Função no Projeto |
 | :--- | :--- |
-| `index.html` | Estrutura principal do site utilizando HTML5 Semântico. |
-| `style.css` | Folha de estilo responsável pelo design editorial, cores e responsividade. |
-| `script.js` | Lógica em JavaScript Vanilla para o Hub de Acessibilidade e animações de scroll. |
+| `index.html` | Estrutura principal do site utilizando HTML. |
+| `style.css` | Folha de estilo responsável pelo design editorial, cores esverdeadas e responsividade. |
+| `script.js` | Lógica em JavaScript para o Hub de Acessibilidade e animações de scroll. |
 | `README.md` | Documentação completa e apresentação do projeto para o GitHub. |
