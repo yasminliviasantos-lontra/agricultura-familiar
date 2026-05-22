@@ -18,7 +18,7 @@ O grande diferencial técnico da aplicação é um painel flutuante de acessibil
 * **Modo Escuro (Dark Mode):** Alternância inteligente de variáveis CSS, proporcionando alto contraste para ambientes com pouca luz ou usuários com sensibilidade visual.
 * 
 ### 🎨 Experiência de Usuário & Identidade Visual
-* **Design Editorial Moderno:** Contraste elegante entre fontes serifadas (`Playfair Display`) para títulos marcantes e sans-serif (`Inter`) para uma leitura limpa do corpo do texto.
+* **Design Editorial Moderno:** Contraste elegante entre fontes para títulos marcantes e para uma leitura limpa do corpo do texto.
 * **Fluidez e Movimento:** Animações sutis ativadas conforme o usuário rola a página, implementadas via *Intersection Observer API* (sem pesar o carregamento).
 * **Responsividade Total:** Layout flexível e adaptável para qualquer tamanho de tela (smartphones, tablets e desktops) estruturado com Tailwind CSS.
 
