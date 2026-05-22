@@ -19,7 +19,6 @@ O grande diferencial técnico da aplicação é um painel flutuante de acessibil
 * 
 ### 🎨 Experiência de Usuário & Identidade Visual
 * **Design Editorial Moderno:** Contraste elegante entre fontes para títulos marcantes e para uma leitura limpa do corpo do texto.
-* **Fluidez e Movimento:** Animações sutis ativadas conforme o usuário rola a página.
 * **Responsividade Total:** Layout flexível e adaptável para qualquer tamanho de tela (smartphones, tablets e desktops).
 ---
 
