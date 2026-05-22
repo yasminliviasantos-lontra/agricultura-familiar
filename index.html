@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultura Familiar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="acessibilidade-bar">
+    <div class="acessibilidade-container">
+        <span class="acessibilidade-label">♿ Acessibilidade:</span>
+        <div class="fonte-controls">
+            <button id="fonte-diminuir" class="btn-acessibilidade">A-</button>
+            <button id="fonte-normal" class="btn-acessibilidade">A</button>
+            <button id="fonte-aumentar" class="btn-acessibilidade">A+</button>
+        </div>
+        <button id="modo-escuro-btn" class="btn-acessibilidade">🌙 Modo Escuro</button>
+        <button id="resetar-btn" class="btn-acessibilidade">🔄 Resetar</button>
+    </div>
+</div>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">🌾 AGRICULTURA FAMILIAR</div>
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#dados">Dados IBGE</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="inicio" class="hero">
+    <div class="hero-content">
+        <h1>Agricultura Familiar</h1>
+        <p>Cultivando o presente, alimentando o futuro</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" id="btn-conheca-mais">Conheça Mais</button>
+            <button class="btn btn-secondary">Apoie Esta Causa</button>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Família colhendo vegetais no jardim" class="imagem-topo">
+        <p class="fonte-pequena">Retirada do Unsplash</p>
+    </div>
+</section>
+
+<section id="sobre" class="sobre">
+    <h2>O que é Agricultura Familiar?</h2>
+    <p>É a produção realizada por famílias que vivem e trabalham no campo, em pequenas propriedades, com mão de obra principalmente familiar.</p>
+    
+    <div class="cards">
+        <div class="card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=500&h=300&fit=crop" alt="Sustentabilidade - Plantando na terra">
+                <p class="fonte-pequena">Retirada do Unsplash</p>
+            </div>
+            <h3>♻️ Sustentabilidade</h3>
+            <p>Produz de forma ambientalmente responsável</p>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=300&fit=crop" alt="Crianças e mãe com cesta de legumes" class="imagem-alimento">
+                <p class="fonte-pequena">Retirada do Unsplash</p>
+            </div>
+            <h3>🥕 Alimento de Verdade</h3>
+            <p>Produtos frescos, saudáveis e de qualidade</p>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500&h=300&fit=crop" alt="Comunidade - Mãos unidas">
+                <p class="fonte-pequena">Retirada do Unsplash</p>
+            </div>
+            <h3>🏘️ Fortalece Comunidades</h3>
+            <p>Gera emprego e renda para famílias</p>
+        </div>
+    </div>
+</section>
+
+<section id="dados" class="dados-ibge">
+    <h2>📊 Dados Reais - IBGE 2026</h2>
+    <div class="dados-container">
+        <div class="dado-card">
+            <h3>Produção de Grãos</h3>
+            <p class="numero">348,7 mi</p>
+            <p>toneladas</p>
+            <p class="fonte">Abril/2026</p>
+        </div>
+        <div class="dado-card">
+            <h3>Soja</h3>
+            <p class="numero">174,1 mi</p>
+            <p>toneladas</p>
+            <p class="fonte">+4,8% vs 2025</p>
+        </div>
+        <div class="dado-card">
+            <h3>Milho</h3>
+            <p class="numero">138,2 mi</p>
+            <p>toneladas</p>
+            <p class="fonte">1ª e 2ª safra</p>
+        </div>
+        <div class="dado-card">
+            <h3>Café</h3>
+            <p class="numero">66,1 mi</p>
+            <p>sacas 60kg</p>
+            <p class="fonte">+14,9% vs 2025</p>
+        </div>
+    </div>
+
+    <div class="dados-detalhe">
+        <h3>Informações Principais - IBGE Abril 2026</h3>
+        <ul>
+            <li><strong>Área a colher:</strong> 83,3 milhões de hectares (+2,1% vs 2025)</li>
+            <li><strong>Variação mensal:</strong> +0,1% (334.277 mil toneladas vs março 2026)</li>
+            <li><strong>Arroz:</strong> 11,3 milhões de toneladas</li>
+            <li><strong>Trigo:</strong> 7,3 milhões de toneladas</li>
+            <li><strong>Algodão:</strong> 9,0 milhões de toneladas</li>
+            <li><strong>Região líder:</strong> Centro-Oeste com 174,5 milhões de toneladas (50% da produção)</li>
+            <li><strong>Maior produtor:</strong> Mato Grosso com 30,9% da produção nacional</li>
+        </ul>
+        <p class="fonte-nota"><strong>Fonte:</strong> IBGE - Levantamento Sistemático da Produção Agrícola (LSPA) - Abril 2026</p>
+    </div>
+</section>
+
+<section id="contato" class="contato">
+    <h2>📞 Contato e Redes Sociais</h2>
+    <div class="contato-content">
+        <div class="contato-info">
+            <h3>Fale Comigo!</h3>
+            <p>Tem perguntas sobre agricultura familiar? Entre em contato!</p>
+            
+            <div class="contato-item">
+                <strong>📧 Email:</strong>
+                <a href="mailto:yasmin.livia.santos@escola.pr.gov.br">yasmin.livia.santos@escola.pr.gov.br</a>
+            </div>
+
+            <div class="contato-item">
+                <strong>📱 Instagram:</strong>
+                <a href="https://instagram.com/yasminlivia023" target="_blank">@yasminlivia023</a>
+            </div>
+
+            <div class="contato-item">
+                <strong>🌐 Redes Sociais:</strong>
+                <div class="redes-sociais">
+                    <a href="https://instagram.com/yasminlivia023" target="_blank" class="rede-link">Instagram</a>
+                    <a href="mailto:yasmin.livia.santos@escola.pr.gov.br" class="rede-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Agricultura Familiar. Todos os direitos reservados.</p>
+    <p>Cultivando o presente, alimentando o futuro 🌾</p>
+    <p>Desenvolvido com ❤️ por Yasmin Lívia Santos</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
