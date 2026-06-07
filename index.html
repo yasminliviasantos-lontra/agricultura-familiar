@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agricultura Familiar</title>
+    <title>AGRO - Agro Forte</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- LOGO NO CANTO -->
+<div class="logo-agro">
+    <img src="https://images.unsplash.com/photo-1500622944245-7fb674dfa25d?w=50&h=50&fit=crop" alt="AGRO Logo">
+</div>
 
 <div class="acessibilidade-bar">
     <div class="acessibilidade-container">
@@ -23,15 +28,256 @@
 
 <header>
     <nav class="navbar">
-        <div class="logo">🌾 TERRA SUSTENTÁVEL</div>
+        <div class="logo">🌾 AGRICULTURA FAMILIAR</div>
         <ul class="menu">
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#dados">Dados IBGE</a></li>
+            <li><a href="#agroforte">AgroForte</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
 </header>
+
+<!-- SEÇÃO AGROFORTE - Novo tema -->
+<section id="agroforte" class="agroforte-intro">
+    <div class="agroforte-container">
+        <div class="agroforte-content">
+            <span class="agroforte-label">🌱 INOVAÇÃO NO CAMPO</span>
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p class="agroforte-subtitle">Equilíbrio entre produção e meio ambiente</p>
+            <p class="agroforte-description">
+                O agro forte é aquele que produz com eficiência, 
+                respeitando a natureza e garantindo qualidade de vida 
+                para as próximas gerações. Juntos, cultivamos um futuro sustentável!
+            </p>
+            <div class="agroforte-buttons">
+                <button class="btn btn-agroforte-primary" id="btn-saiba-mais">Saiba Mais</button>
+                <button class="btn btn-agroforte-secondary" id="btn-video">▶ Assistir Vídeo</button>
+            </div>
+        </div>
+        <div class="agroforte-image">
+            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad576?w=600&h=400&fit=crop" alt="Campo sustentável ao pôr do sol">
+        </div>
+    </div>
+</section>
+
+<!-- MODAL SAIBA MAIS AGROFORTE -->
+<div id="modal-saiba-mais" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Sobre a AgroForte</h2>
+            <button class="close-btn" onclick="fecharModal('modal-saiba-mais')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p>
+                A AgroForte é uma fintech brasileira focada no agronegócio que nasceu para desburocraticar o acesso ao crédito para pequenos e médios produtores rurais. O foco principal da empresa está no setor de proteína animal e laticínios, atendendo quem trabalha com a criação de aves, suínos, gado de corte e produção de leite.
+            </p>
+            <p>
+                O grande diferencial do modelo de negócios da AgroForte é a integração com a cadeia produtiva. A fintech atua em parceria com as agroindústrias que compram a produção desses fazendeiros. Dessa forma, o processo de análise de crédito se torna muito mais rápido e seguro, e o pagamento das parcelas do financiamento pode ser descontado diretamente dos repasses financeiros que o produtor já receberia da indústria.
+            </p>
+            <p>
+                Por ser uma plataforma digital, ela elimina a papelada e a lentidão dos bancos tradicionais. O crédito liberado é utilizado pelos produtores para capital de giro, compra de ração, aquisição de animais e modernização das fazendas. Com isso, a AgroForte promove a inclusão financeira no campo e ajuda a impulsionar a produtividade do agronegócio brasileiro.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- SEÇÃO PRÁTICAS AGROFORTE -->
+<section id="praticas-agroforte" class="praticas-agroforte">
+    <h2>Práticas que fazem a diferença 🌿</h2>
+    <p class="praticas-intro">Conheça as principais práticas sustentáveis do AgroForte</p>
+    
+    <div class="praticas-grid">
+        <div class="pratica-card">
+            <div class="pratica-icon">🌱</div>
+            <h3>Manejo do Solo</h3>
+            <p>Solo saudável, colheita mais farta. Cuidar do solo é investir no futuro.</p>
+        </div>
+        <div class="pratica-card">
+            <div class="pratica-icon">💧</div>
+            <h3>Uso Consciente da Água</h3>
+            <p>Cada gota importa! Irrigação inteligente para o futuro.</p>
+        </div>
+        <div class="pratica-card">
+            <div class="pratica-icon">☀️</div>
+            <h3>Energia Renovável</h3>
+            <p>Soluções limpas que movimentam o campo.</p>
+        </div>
+        <div class="pratica-card">
+            <div class="pratica-icon">🐝</div>
+            <h3>Biodiversidade</h3>
+            <p>Preservar é garantir o equilíbrio do ecossistema.</p>
+        </div>
+        <div class="pratica-card">
+            <div class="pratica-icon">👨‍🌾</div>
+            <h3>Agricultura Familiar</h3>
+            <p>A força que alimenta o Brasil com respeito.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO FAQ - PERGUNTAS FREQUENTES -->
+<section id="faq-agroforte" class="faq-agroforte">
+    <h2>❓ Perguntas Frequentes sobre AgroForte</h2>
+    
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <h3>O que é AgroForte?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>AgroForte é um movimento que promove a agricultura sustentável, equilibrando a produção agrícola com a preservação do meio ambiente. É sobre produzir mais cuidando melhor!</p>
+                <div class="faq-answer-extra">
+                    <strong>💡 Saiba mais:</strong> Visite nosso site oficial para conhecer todos os programas!
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <h3>Como posso aderir ao AgroForte?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Você pode começar implementando práticas sustentáveis em sua propriedade: cuidar do solo, usar água de forma inteligente, preservar a biodiversidade e investir em energias renováveis.</p>
+                <div class="faq-answer-extra">
+                    <strong>📋 Próximos Passos:</strong> Entre em contato conosco para receber orientação personalizada!
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <h3>Quais são os benefícios da agricultura sustentável?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Melhor qualidade dos produtos, redução de custos com insumos, preservação do solo para gerações futuras, melhoria da saúde do ecossistema e maior rentabilidade a longo prazo.</p>
+                <div class="faq-answer-extra">
+                    <strong>📊 Resultado:</strong> Produtores relatam aumento de até 30% em produtividade!
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <h3>O AgroForte funciona para pequenos produtores?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Sim! AgroForte é especialmente importante para pequenos e médios produtores. Práticas sustentáveis aumentam a produtividade e reduzem custos, tornando a agricultura mais viável.</p>
+                <div class="faq-answer-extra">
+                    <strong>👥 Comunidade:</strong> Milhares de pequenos agricultores já fazem parte do programa!
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <h3>Como a tecnologia ajuda no AgroForte?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Sensores inteligentes, drones, sistemas de irrigação automática e apps de monitoramento ajudam os agricultores a tomar decisões mais precisas e sustentáveis.</p>
+                <div class="faq-answer-extra">
+                    <strong>🤖 Inovação:</strong> Conheça nossas ferramentas de IA para o campo!
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <h3>Qual é o impacto ambiental positivo?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Redução de emissões de carbono, recuperação de solos degradados, preservação de água, proteção da biodiversidade e contribuição para combater as mudanças climáticas.</p>
+                <div class="faq-answer-extra">
+                    <strong>🌍 Planeta:</strong> Juntos estamos fazendo diferença no clima!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL CONHEÇA MAIS - AGRICULTURA FAMILIAR -->
+<div id="modal-conheca-mais" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Agricultura Familiar</h2>
+            <button class="close-btn" onclick="fecharModal('modal-conheca-mais')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p>
+                A agricultura familiar é o modelo de produção rural gerido e operado por núcleos familiares, sendo a base da segurança alimentar. Responsável por colocar cerca de 70% dos alimentos na mesa dos brasileiros, o setor destaca-se por abastecer o mercado interno, preservar o meio ambiente e manter a população no campo.
+            </p>
+
+            <h3>🌿 Pilares e Importância</h3>
+            <p>
+                <strong>Segurança Alimentar:</strong> Produz a maior parte da comida que consumimos diariamente, como feijão (70%), mandioca (87%) e leite.
+            </p>
+            <p>
+                <strong>Emprego e Renda:</strong> Responde por cerca de 67% das ocupações no campo e movimenta a economia de milhares de municípios brasileiros.
+            </p>
+            <p>
+                <strong>Sustentabilidade:</strong> Utiliza práticas tradicionais que respeitam o solo e evitam o uso excessivo de defensivos químicos.
+            </p>
+
+            <h3>🚜 O que diz a Lei</h3>
+            <p>
+                No Brasil, a Lei nº 11.326/2006 determina que, para ser considerado agricultor familiar, o produtor deve:
+            </p>
+            <ul>
+                <li>Ter uma propriedade de até 4 módulos fiscais.</li>
+                <li>Utilizar predominantemente mão de obra da própria família.</li>
+                <li>Ter a maior parte da renda familiar originada das atividades do próprio estabelecimento.</li>
+                <li>Gerenciar o empreendimento junto com a família.</li>
+            </ul>
+
+            <h3>💰 Políticas de Apoio</h3>
+            <p>
+                O principal incentivo do governo para o setor é o <strong>PRONAF (Programa Nacional de Fortalecimento da Agricultura Familiar)</strong>. Ele oferece linhas de crédito com juros mais baixos para custeio e investimento, auxiliando os pequenos produtores na modernização e ampliação de suas lavouras.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL APOIE ESTA CAUSA -->
+<div id="modal-apoie-causa" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Como Apoiar a Agricultura Familiar</h2>
+            <button class="close-btn" onclick="fecharModal('modal-apoie-causa')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p>
+                <strong>Apoiar essa causa é simples e muito transformador:</strong>
+            </p>
+
+            <h3>🛒 Compre de quem produz</h3>
+            <p>
+                Dê preferência a feiras livres, produtores locais e comércios de bairro.
+            </p>
+
+            <h3>🥕 Valorize o produto fresco</h3>
+            <p>
+                Reduza o consumo de ultraprocessados e leve mais frutas, verduras e legumes frescos direto do produtor.
+            </p>
+
+            <h3>🌐 Conheça as iniciativas da sua região</h3>
+            <p>
+                Em Cianorte e no Paraná, procure cooperativas e iniciativas locais que conectam pequenos agricultores aos consumidores.
+            </p>
+
+            <h3>📢 Compartilhe informação</h3>
+            <p>
+                Entenda melhor a importância da Agricultura Familiar e ajude a conscientizar outras pessoas sobre o impacto de consumir local.
+            </p>
+        </div>
+    </div>
+</div>
 
 <section id="inicio" class="hero">
     <div class="hero-content">
@@ -39,12 +285,12 @@
         <p>Cultivando o presente, alimentando o futuro</p>
         <div class="hero-buttons">
             <button class="btn btn-primary" id="btn-conheca-mais">Conheça Mais</button>
-            <button class="btn btn-secondary">Apoie Esta Causa</button>
+            <button class="btn btn-secondary" id="btn-apoie-causa">Apoie Esta Causa</button>
         </div>
     </div>
     <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Família colhendo vegetais no jardim" class="imagem-topo">
-        <p class="fonte-pequena">Retirada do Unsplash</p>
+        <img src="https://images.unsplash.com/photo-1585970480901-90d6979e9a91?w=600&h=400&fit=crop" alt="Agricultores no campo">
+        <p class="fonte-pequena">Retirada do pexels.com</p>
     </div>
 </section>
 
@@ -56,23 +302,23 @@
         <div class="card">
             <div class="card-image">
                 <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=500&h=300&fit=crop" alt="Sustentabilidade - Plantando na terra">
-                <p class="fonte-pequena">Retirada do Unsplash</p>
+                <p class="fonte-pequena">Retirada do pexels.com</p>
             </div>
             <h3>♻️ Sustentabilidade</h3>
             <p>Produz de forma ambientalmente responsável</p>
         </div>
         <div class="card">
             <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=300&fit=crop" alt="Crianças e mãe com cesta de legumes" class="imagem-alimento">
-                <p class="fonte-pequena">Retirada do Unsplash</p>
+                <img src="https://images.unsplash.com/photo-1464621966675-36e2c4e88f15?w=500&h=300&fit=crop" alt="Alimento de verdade - Tomates frescos">
+                <p class="fonte-pequena">Retirada do pexels.com</p>
             </div>
             <h3>🥕 Alimento de Verdade</h3>
             <p>Produtos frescos, saudáveis e de qualidade</p>
         </div>
         <div class="card">
             <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500&h=300&fit=crop" alt="Comunidade - Mãos unidas">
-                <p class="fonte-pequena">Retirada do Unsplash</p>
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop" alt="Comunidade - Mãos unidas">
+                <p class="fonte-pequena">Retirada do pexels.com</p>
             </div>
             <h3>🏘️ Fortalece Comunidades</h3>
             <p>Gera emprego e renda para famílias</p>
@@ -90,7 +336,7 @@
             <p class="fonte">Abril/2026</p>
         </div>
         <div class="dado-card">
-            <h3>Soja</h3>
+            <h3>Soja (Recorde)</h3>
             <p class="numero">174,1 mi</p>
             <p>toneladas</p>
             <p class="fonte">+4,8% vs 2025</p>
@@ -102,7 +348,7 @@
             <p class="fonte">1ª e 2ª safra</p>
         </div>
         <div class="dado-card">
-            <h3>Café</h3>
+            <h3>Café (Recorde)</h3>
             <p class="numero">66,1 mi</p>
             <p>sacas 60kg</p>
             <p class="fonte">+14,9% vs 2025</p>
@@ -153,9 +399,9 @@
 </section>
 
 <footer>
-    <p>&copy; 2026 Agricultura Familiar. Todos os direitos reservados.</p>
+    <p>&copy; 2024 Agricultura Familiar. Todos os direitos reservados.</p>
     <p>Cultivando o presente, alimentando o futuro 🌾</p>
-    <p>Desenvolvido com ❤️ por Yasmin Lívia dos Santos</p>
+    <p>Desenvolvido com ❤️ por Yasmin Lívia Santos</p>
 </footer>
 
 <script src="script.js"></script>
