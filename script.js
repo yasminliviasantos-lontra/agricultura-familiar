@@ -1,3 +1,4 @@
+// MODO ESCURO
 function alternarModoEscuro() {
     document.body.classList.toggle('modo-escuro');
     if (document.body.classList.contains('modo-escuro')) {
@@ -13,6 +14,7 @@ if (localStorage.getItem('modoEscuro') === 'ativo') {
     document.body.classList.add('modo-escuro');
 }
 
+// AUMENTAR FONTE
 function aumentarFonte() {
     const body = document.body;
     if (body.classList.contains('fonte-muito-aumentada')) {
@@ -54,6 +56,7 @@ if (tamanhoFonteSalvo === 'aumentada') {
     document.body.classList.add('fonte-aumentada', 'fonte-muito-aumentada');
 }
 
+// RESETAR
 document.getElementById('resetar-btn').addEventListener('click', function() {
     document.body.classList.remove('modo-escuro');
     localStorage.setItem('modoEscuro', 'inativo');
@@ -62,6 +65,7 @@ document.getElementById('resetar-btn').addEventListener('click', function() {
     alert('✅ Configurações resetadas!');
 });
 
+// NAVEGAÇÃO
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -72,18 +76,137 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Botão "Conheça Mais"
-document.getElementById('btn-conheca-mais').addEventListener('click', function() {
-    alert('Um familiar da agricultura é o modelo em que a própria família gerencia o negócio e realiza a maior parte do trabalho no campo. Responsável por mais de 70% da mão de obra agropecuária no Brasil, é a base da segurança alimentar do país, produzindo alimentos essenciais como mandioca, feijão e leite. Conheça mais conversando na minha companhia: yasmin.livia.santos@escola.pr.gov.br');
-});
-
-// Outros botões
+// BOTÕES
 document.querySelectorAll('.btn').forEach(button => {
-    if (button.id !== 'btn-conheca-mais') {
+    if (button.id !== 'btn-conheca-mais' && button.id !== 'btn-saiba-mais' && button.id !== 'btn-video') {
         button.addEventListener('click', function() {
-            alert('Apoiar a agricultura familiar fortalece a economia local, promove a sustentabilidade e garante alimentos frescos na mesa. Você pode fazer isso comprando diretamente de pequenos produtores (feiras livres, cooperativas), valorizando produtos com o Selo Nacional da Agricultura Familiar (SENAF) e cobrando políticas públicas de incentivo ao setor. 🌾 Obrigada por se interessar!');
+            alert('🌾 Obrigado por se interessar!');
         });
     }
 });
 
-console.log('✅ Site funcionando!');
+// ========== LER A PÁGINA EM VOZ ALTA ==========
+
+function iniciarLeitura() {
+    // Selecionar todo o texto do body, excluindo a barra de acessibilidade
+    const acessibilidadeBar = document.querySelector('.acessibilidade-bar');
+    const bodyClone = document.body.cloneNode(true);
+    
+    if (acessibilidadeBar) {
+        const acessibilidadeBarClone = bodyClone.querySelector('.acessibilidade-bar');
+        if (acessibilidadeBarClone) {
+            acessibilidadeBarClone.remove();
+        }
+    }
+    
+    const textos = bodyClone.innerText;
+    
+    // Criar uma utterância
+    const utterance = new SpeechSynthesisUtterance(textos);
+    utterance.lang = 'pt-BR';
+    utterance.rate = 0.9;
+    
+    // Falar
+    window.speechSynthesis.speak(utterance);
+}
+
+function pararLeitura() {
+    window.speechSynthesis.cancel();
+}
+
+// Adicionar botão de leitura no acessibilidade-bar
+document.addEventListener('DOMContentLoaded', function() {
+    const acessibilidadeContainer = document.querySelector('.acessibilidade-container');
+    
+    const btnLeitura = document.createElement('button');
+    btnLeitura.id = 'btn-leitura';
+    btnLeitura.className = 'btn-acessibilidade';
+    btnLeitura.title = 'Ler página em voz alta';
+    btnLeitura.innerHTML = '🔊 Ler Página';
+    
+    let lendo = false;
+    
+    btnLeitura.addEventListener('click', function() {
+        if (!lendo) {
+            iniciarLeitura();
+            btnLeitura.innerHTML = '⏹️ Parar Leitura';
+            lendo = true;
+        } else {
+            pararLeitura();
+            btnLeitura.innerHTML = '🔊 Ler Página';
+            lendo = false;
+        }
+    });
+    
+    acessibilidadeContainer.appendChild(btnLeitura);
+});
+
+// ========== FAQ - PERGUNTAS FREQUENTES ==========
+
+function toggleFAQ(element) {
+    const faqItem = element.parentElement;
+    const faqAnswer = faqItem.querySelector('.faq-answer');
+    
+    // Fechar todos os outros
+    document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== faqItem) {
+            item.classList.remove('active');
+            item.querySelector('.faq-answer').classList.remove('active');
+        }
+    });
+    
+    // Toggle o atual
+    faqItem.classList.toggle('active');
+    faqAnswer.classList.toggle('active');
+}
+
+// ========== MODAL SAIBA MAIS ==========
+
+function abrirModal(modalId) {
+    document.getElementById(modalId).classList.add('active');
+}
+
+function fecharModal(modalId) {
+    document.getElementById(modalId).classList.remove('active');
+}
+
+// Fechar modal ao clicar fora
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.classList.remove('active');
+    }
+});
+
+// Botão "Saiba Mais"
+document.addEventListener('DOMContentLoaded', function() {
+    const btnSaibaMais = document.getElementById('btn-saiba-mais');
+    if (btnSaibaMais) {
+        btnSaibaMais.addEventListener('click', function() {
+            abrirModal('modal-saiba-mais');
+        });
+    }
+});
+
+// ========== BOTÃO ASSISTIR VÍDEO ==========
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btnVideo = document.getElementById('btn-video');
+    if (btnVideo) {
+        btnVideo.addEventListener('click', function() {
+            window.open('https://www.youtube.com/watch?v=pruJBdwht1M', '_blank');
+        });
+    }
+});
+
+// ========== BOTÃO CONHEÇA MAIS ==========
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btnConhecaMais = document.getElementById('btn-conheca-mais');
+    if (btnConhecaMais) {
+        btnConhecaMais.addEventListener('click', function() {
+            alert('Conheça mais conversando na minha companhia: yasmin.livia.santos@escola.pr.gov.br');
+        });
+    }
+});
+
+console.log('✅ Site funcionando com todas as funcionalidades!');
