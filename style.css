@@ -7,11 +7,17 @@
     --cinza-claro: #f5f5f5;
 }
 
+/* MODO ESCURO - PRETO MESMO! */
 body.modo-escuro {
-    --preto: #000000;
-    --branco: #1a1a1a;
+    --preto: #FFFFFF;
+    --branco: #0a0a0a;
     --verde-agua: #00E6D4;
     --verde-escuro: #00a388;
+    --cinza-claro: #2a2a2a;
+}
+
+body.modo-escuro {
+    background-color: #0a0a0a !important;
 }
 
 * {
@@ -77,6 +83,28 @@ body.fonte-muito-aumentada .numero {
     font-size: 3.5rem !important;
 }
 
+/* LOGO NO CANTO */
+.logo-agro {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 150;
+    background: var(--branco);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-agro img {
+    height: 40px;
+    width: auto;
+}
+
+body.modo-escuro .logo-agro {
+    background: #1a1a1a;
+}
+
+/* BARRA DE ACESSIBILIDADE */
 .acessibilidade-bar {
     background-color: var(--verde-escuro);
     color: var(--branco);
@@ -84,7 +112,7 @@ body.fonte-muito-aumentada .numero {
     position: sticky;
     top: 0;
     z-index: 200;
-    box-shadow: 0 2px 5px rgba(119, 117, 117, 0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .acessibilidade-container {
@@ -124,6 +152,19 @@ body.fonte-muito-aumentada .numero {
     transform: scale(1.1);
 }
 
+.btn-acessibilidade:focus {
+    outline: 2px solid var(--branco);
+}
+
+#btn-leitura {
+    background-color: #ff6b6b !important;
+}
+
+#btn-leitura:hover {
+    background-color: #ff5252 !important;
+}
+
+/* HEADER */
 header {
     background-color: var(--branco);
     border-bottom: 3px solid var(--verde-escuro);
@@ -132,6 +173,10 @@ header {
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+}
+
+body.modo-escuro header {
+    background-color: #1a1a1a;
 }
 
 .navbar {
@@ -155,18 +200,291 @@ header {
     gap: 2rem;
 }
 
+.menu li {
+    list-style: none;
+}
+
 .menu a {
     text-decoration: none;
     color: var(--preto);
     font-weight: 500;
     transition: color 0.3s;
     padding: 0.5rem;
+    display: inline-block;
+}
+
+body.modo-escuro .menu a {
+    color: var(--branco);
 }
 
 .menu a:hover {
     color: var(--verde-agua);
 }
 
+.menu a:focus {
+    outline: 2px solid var(--verde-agua);
+    outline-offset: 2px;
+}
+
+/* ========== SEÇÃO AGROFORTE ========== */
+
+.agroforte-intro {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--verde-agua) 0%, var(--verde-escuro) 100%);
+    color: var(--branco);
+}
+
+.agroforte-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.agroforte-content {
+    flex: 1;
+}
+
+.agroforte-label {
+    display: inline-block;
+    background-color: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.agroforte-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--branco);
+}
+
+.agroforte-subtitle {
+    font-size: 1.5rem;
+    color: var(--verde-agua);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.agroforte-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.agroforte-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.btn:focus {
+    outline: 3px solid var(--branco);
+    outline-offset: 2px;
+}
+
+.btn-agroforte-primary {
+    background-color: var(--branco);
+    color: var(--verde-escuro);
+    padding: 0.8rem 2rem;
+}
+
+.btn-agroforte-primary:hover {
+    background-color: var(--verde-agua);
+    color: var(--preto);
+}
+
+.btn-agroforte-secondary {
+    background-color: transparent;
+    color: var(--branco);
+    border: 2px solid var(--branco);
+    padding: 0.8rem 2rem;
+}
+
+.btn-agroforte-secondary:hover {
+    background-color: var(--branco);
+    color: var(--verde-escuro);
+}
+
+.agroforte-image {
+    flex: 1;
+}
+
+.agroforte-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* MODAL SAIBA MAIS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 300;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+body.modo-escuro .modal-content {
+    background-color: #2a2a2a;
+    color: var(--branco);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--verde-agua);
+    padding-bottom: 1rem;
+}
+
+.modal-header h2 {
+    color: var(--verde-escuro);
+    font-size: 1.8rem;
+}
+
+body.modo-escuro .modal-header h2 {
+    color: var(--verde-agua);
+}
+
+.close-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--verde-escuro);
+    background: none;
+    border: none;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--verde-agua);
+}
+
+.modal-body p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* PRÁTICAS AGROFORTE */
+
+.praticas-agroforte {
+    padding: 4rem 2rem;
+    background-color: var(--cinza-claro);
+    text-align: center;
+}
+
+body.modo-escuro .praticas-agroforte {
+    background-color: #1a1a1a;
+}
+
+.praticas-agroforte h2 {
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: 1rem;
+}
+
+body.modo-escuro .praticas-agroforte h2 {
+    color: var(--verde-agua);
+}
+
+.praticas-intro {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+body.modo-escuro .praticas-intro {
+    color: var(--branco);
+}
+
+.praticas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pratica-card {
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--verde-agua);
+}
+
+body.modo-escuro .pratica-card {
+    background-color: #2a2a2a;
+    border-top: 4px solid var(--verde-agua);
+}
+
+.pratica-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.pratica-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.pratica-card h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+body.modo-escuro .pratica-card h3 {
+    color: var(--verde-agua);
+}
+
+.pratica-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+body.modo-escuro .pratica-card p {
+    color: var(--branco);
+}
+
+/* HERO */
 .hero {
     display: flex;
     align-items: center;
@@ -175,6 +493,10 @@ header {
     background: linear-gradient(135deg, var(--verde-agua) 0%, var(--verde-escuro) 100%);
     color: var(--branco);
     gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
 }
 
 .hero-content h1 {
@@ -193,16 +515,6 @@ header {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-}
-
-.btn {
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-weight: bold;
 }
 
 .btn-primary {
@@ -226,16 +538,40 @@ header {
     color: var(--verde-escuro);
 }
 
-.hero-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+.hero-image {
+    flex: 1;
 }
 
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    display: block;
+}
+
+.fonte-pequena {
+    font-size: 0.75rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+body.modo-escuro .fonte-pequena {
+    color: #aaa;
+}
+
+/* SOBRE */
 .sobre {
     padding: 4rem 2rem;
     background-color: var(--cinza-claro);
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+body.modo-escuro .sobre {
+    background-color: #1a1a1a;
 }
 
 .sobre h2 {
@@ -252,6 +588,10 @@ header {
     margin-right: auto;
 }
 
+body.modo-escuro .sobre p {
+    color: var(--branco);
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -265,11 +605,17 @@ header {
     border-radius: 10px;
     border-left: 5px solid var(--verde-agua);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.modo-escuro .card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
 }
 
 .card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .card h3 {
@@ -278,11 +624,50 @@ header {
     font-size: 1.3rem;
 }
 
+body.modo-escuro .card h3 {
+    color: var(--verde-agua);
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+body.modo-escuro .card p {
+    color: var(--branco);
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #f0f0f0;
+}
+
+body.modo-escuro .card-image {
+    background-color: #333;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* DADOS IBGE */
 .dados-ibge {
     padding: 4rem 2rem;
     background-color: var(--preto);
     color: var(--branco);
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+body.modo-escuro .dados-ibge {
+    background-color: #0a0a0a;
 }
 
 .dados-ibge h2 {
@@ -295,6 +680,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .dado-card {
@@ -302,12 +688,29 @@ header {
     padding: 2rem;
     border-radius: 10px;
     border: 2px solid var(--verde-agua);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.modo-escuro .dado-card {
+    background-color: #1a1a1a;
+    border: 2px solid var(--verde-agua);
+}
+
+.dado-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 196, 164, 0.3);
 }
 
 .dado-card h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: var(--verde-agua);
+}
+
+.dado-card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--branco);
 }
 
 .numero {
@@ -323,60 +726,188 @@ header {
     margin-top: 1rem;
 }
 
-footer {
-    background-color: var(--preto);
-    color: var(--branco);
-    text-align: center;
+.dados-detalhe {
+    background-color: var(--verde-escuro);
     padding: 2rem;
-    border-top: 3px solid var(--verde-agua);
+    border-radius: 10px;
+    border: 2px solid var(--verde-agua);
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-footer p {
-    margin: 0.5rem 0;
+body.modo-escuro .dados-detalhe {
+    background-color: #1a1a1a;
 }
 
-/* IMAGENS NOS CARDS */
-.card-image {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
+.dados-detalhe h3 {
+    color: var(--verde-agua);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.dados-detalhe ul {
+    list-style-position: inside;
+    margin-bottom: 1.5rem;
+}
+
+.dados-detalhe li {
+    margin-bottom: 0.8rem;
+    color: var(--branco);
+    font-size: 0.95rem;
+}
+
+.fonte-nota {
+    font-size: 0.85rem;
+    color: var(--verde-agua);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* FAQ - PERGUNTAS FREQUENTES */
+
+.faq-agroforte {
+    padding: 4rem 2rem;
+    background-color: var(--branco);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+body.modo-escuro .faq-agroforte {
+    background-color: #1a1a1a;
+}
+
+.faq-agroforte h2 {
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+body.modo-escuro .faq-agroforte h2 {
+    color: var(--verde-agua);
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    border: 2px solid var(--verde-agua);
     border-radius: 8px;
-    margin-bottom: 1rem;
-    background-color: #f0f0f0;
+    overflow: hidden;
+    background-color: var(--cinza-claro);
+    transition: all 0.3s;
 }
 
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+body.modo-escuro .faq-item {
+    background-color: #2a2a2a;
+    border: 2px solid var(--verde-escuro);
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 196, 164, 0.2);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    background-color: var(--cinza-claro);
+    user-select: none;
+}
+
+body.modo-escuro .faq-question {
+    background-color: #2a2a2a;
+}
+
+.faq-question h3 {
+    color: var(--verde-escuro);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+body.modo-escuro .faq-question h3 {
+    color: var(--verde-agua);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--verde-agua);
+    transition: transform 0.3s;
+}
+
+.faq-question:hover {
+    background-color: rgba(0, 196, 164, 0.1);
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    background-color: var(--branco);
+    border-top: 2px solid var(--verde-agua);
+}
+
+body.modo-escuro .faq-answer {
+    background-color: #1a1a1a;
+}
+
+.faq-answer.active {
     display: block;
 }
 
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.faq-answer p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1rem;
 }
 
-.fonte-pequena {
-    font-size: 0.75rem;
-    color: #eaeaea;
-    font-style: italic;
-    margin-top: 0.5rem;
-    text-align: center;
+body.modo-escuro .faq-answer p {
+    color: var(--branco);
 }
 
-/* SEÇÃO CONTATO */
+.faq-answer-extra {
+    background-color: var(--verde-agua);
+    color: var(--preto);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: none;
+}
+
+.faq-answer.active .faq-answer-extra {
+    display: block;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* CONTATO */
+
 .contato {
     padding: 4rem 2rem;
     background-color: var(--cinza-claro);
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+body.modo-escuro .contato {
+    background-color: #1a1a1a;
 }
 
 .contato h2 {
     font-size: 2.5rem;
     color: var(--verde-escuro);
     margin-bottom: 3rem;
+}
+
+body.modo-escuro .contato h2 {
+    color: var(--verde-agua);
 }
 
 .contato-content {
@@ -388,15 +919,27 @@ footer p {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+body.modo-escuro .contato-content {
+    background-color: #2a2a2a;
+}
+
 .contato-info h3 {
     color: var(--verde-escuro);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
+body.modo-escuro .contato-info h3 {
+    color: var(--verde-agua);
+}
+
 .contato-info p {
     margin-bottom: 2rem;
     color: #666;
+}
+
+body.modo-escuro .contato-info p {
+    color: var(--branco);
 }
 
 .contato-item {
@@ -408,10 +951,19 @@ footer p {
     border-left: 4px solid var(--verde-agua);
 }
 
+body.modo-escuro .contato-item {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+}
+
 .contato-item strong {
     color: var(--verde-escuro);
     display: block;
     margin-bottom: 0.5rem;
+}
+
+body.modo-escuro .contato-item strong {
+    color: var(--verde-agua);
 }
 
 .contato-item a {
@@ -424,6 +976,10 @@ footer p {
 .contato-item a:hover {
     color: var(--verde-escuro);
     text-decoration: underline;
+}
+
+body.modo-escuro .contato-item a:hover {
+    color: var(--branco);
 }
 
 .redes-sociais {
@@ -443,6 +999,7 @@ footer p {
     border-radius: 5px;
     transition: all 0.3s;
     font-weight: bold;
+    display: inline-block;
 }
 
 .rede-link:hover {
@@ -451,44 +1008,242 @@ footer p {
     transform: scale(1.05);
 }
 
-body.modo-escuro .contato {
-    background-color: var(--branco);
+body.modo-escuro .rede-link {
+    background-color: var(--verde-agua);
+    color: #000;
 }
 
-body.modo-escuro .contato-content {
-    background-color: var(--cinza-claro);
+body.modo-escuro .rede-link:hover {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
 }
+
+/* FOOTER */
+footer {
+    background-color: var(--preto);
+    color: var(--branco);
+    text-align: center;
+    padding: 2rem;
+    border-top: 3px solid var(--verde-agua);
+    transition: all 0.3s ease;
+}
+
+body.modo-escuro footer {
+    background-color: #0a0a0a;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: var(--verde-agua);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* MODAL - ESTILOS ADICIONAIS */
+
+.modal-body h3 {
+    color: var(--verde-escuro);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+body.modo-escuro .modal-body h3 {
+    color: var(--verde-agua);
+}
+
+.modal-body ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.modal-body li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+body.modo-escuro .modal-body li {
+    color: var(--branco);
+}
+
+.modal-body strong {
+    color: var(--verde-escuro);
+    font-weight: bold;
+}
+
+body.modo-escuro .modal-body strong {
+    color: var(--verde-agua);
+}
+/* RESPONSIVO - CELULARES E TABLETS */
 @media (max-width: 768px) {
-    .hero { flex-direction: column; text-align: center; }
-    .hero-content h1 { font-size: 2rem; }
-    .menu { flex-direction: column; gap: 1rem; }
-    .hero-buttons { flex-direction: column; }
+    .logo-agro {
+        height: 30px;
+        top: 5px;
+        right: 5px;
+    }
+
+    .logo-agro img {
+        height: 30px;
+    }
+
+    .acessibilidade-container {
+        gap: 0.5rem;
+    }
+
+    .btn-acessibilidade {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    header {
+        top: 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .sobre {
+        padding: 2rem 1rem;
+    }
+
+    .sobre h2 {
+        font-size: 1.8rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dados-ibge {
+        padding: 2rem 1rem;
+    }
+
+    .dados-ibge h2 {
+        font-size: 1.8rem;
+    }
+
+    .dados-container {
+        grid-template-columns: 1fr;
+    }
+
+    .numero {
+        font-size: 2rem;
+    }
+
+    .dados-detalhe {
+        padding: 1.5rem;
+    }
+
+    .contato {
+        padding: 2rem 1rem;
+    }
+
+    .agroforte-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .agroforte-content h1 {
+        font-size: 2rem;
+    }
+
+    .agroforte-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .praticas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-question {
+        padding: 1rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    .agroforte-buttons {
+        flex-direction: column;
+    }
+
+    .btn-agroforte-primary,
+    .btn-agroforte-secondary {
+        width: 100%;
+    }
 }
 
-/* Tablets (Telas maiores que 600px) */
-@media screen and (min-width: 600px) {
+@media (max-width: 480px) {
     body {
-        background-color: #e3f2fd;
+        font-size: 14px;
     }
 
-    .container {
-        flex-direction: row;
-        flex-wrap: wrap;
+    .hero-content h1 {
+        font-size: 1.5rem;
     }
 
-    .card {
-        flex: 1;
-    }
-}
-
-/* Desktops (Telas maiores que 1024px) */
-@media screen and (min-width: 1024px) {
-    body {
-        background-color: #e8f5e9;
+    .sobre h2,
+    .dados-ibge h2,
+    .agroforte-content h1 {
+        font-size: 1.5rem;
     }
 
-   .card {
-    padding: 2.5rem;
-    border: 2px solid #4caf50;
+    .numero {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .faq-agroforte h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.3rem;
     }
 }
